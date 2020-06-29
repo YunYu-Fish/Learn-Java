@@ -4,6 +4,11 @@
 # Log file
 *.log
 
+#忽略当前目录的
+.DS_Store
+#忽略子目录的.DS_Store
+*/.DS_Store
+
 # BlueJ files
 *.ctxt
 
