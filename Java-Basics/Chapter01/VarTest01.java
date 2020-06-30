@@ -19,7 +19,7 @@
 
 */
 
-public class varTest{
+public class varTest01{
   public static void main(String[] args){
 
     System.out.println(100);//整数型
@@ -28,6 +28,29 @@ public class varTest{
     System.out.println('好');//字符型
     System.out.println("true");//字符串型
     System.out.println(true);//布尔型
+
+    //如果只有字面值，没有变量机制的话，有什么问题？
+    /*例：10是一个整数型数据，在内存中占有一定 空间（CPU 内存 硬盘）
+      假设计算10 +20 =30
+      计算机将在内存中找一块空间存储10，再找一块空间存储20，CPU运算完再找一块空间存储结果30
+    */
+    //以下虽然都是10，但是这三个10占用三块不同的空间
+    System.out.println(10);
+    System.out.println(10);
+    System.out.println(10);
+    //只有字面量机制，内存是无法重复利用的
+
+    //定义/声明一个变量i
+    int i =10;
+    //以下这3次访问都是访问的同一块访问空间
+    System.out.println(i);
+    System.out.println(i);
+    System.out.println(i);
+
+    //以下程序表示访问的是字符i和字符串i，以下的两个i和上面的变量i没有任何关系
+    System.out.println('i');
+    System.out.println("i");
+
 
   }
 }
