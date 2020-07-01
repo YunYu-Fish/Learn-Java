@@ -3,7 +3,7 @@
 
   - java中有一个语法规则：
     当整数型字面量没有超出给byte当取值范围，这个整数型字面值可以直接赋值给byte
-    ！！：同理short char也是
+    ！！：同理short，char也是
 */
 
 public class IntTest02{
