@@ -29,11 +29,11 @@ public class IntTest02{
     byte a = (byte)300;
     System.out.println(a);
 
-    //按理应该报错，但是编译通过
+    //按理应该报错，但是编译通过，无需强转
     byte b = 1;
     byte c = 127;
-    //下面编译报错，因为128超出了byte的取值范围
-    byte d = 128;
+    //下面编译报错，因为128超出了byte的取值范围,需要强转
+    //byte d = 128;
 
   }
 }
