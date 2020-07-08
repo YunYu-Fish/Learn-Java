@@ -18,7 +18,7 @@ public class DoWhile{
     /*
     int i = 0;
     do{
-      System.out.println(i);0,1,2,3...9
+      System.out.println(i);//0,1,2,3...9
       i++;
     }while(i<10);
     */
