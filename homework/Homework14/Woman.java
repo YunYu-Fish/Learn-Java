@@ -1,13 +1,13 @@
 public Women{
   //身份证
-  long IdCard;
+  String IdCard;
 
   //姓名
   String name;
 
   //性别
-  boolean gender;
+  static boolean gender = false;
 
-  //男人
-  String Men
+  //女人的男人
+  Men Men
 }
