@@ -18,8 +18,9 @@ Customer [Smith，Jane] has a account ：id is 1000 annualInterestRate is 1.23% 
 
 public class Homework03{
   public static void main(String[] args){
-    Account a = new Account("1000",2000,1.23);
+    Account a = new Account("1000",2000,1.23,null);
     Customer c = new Customer("Simth, Jane",a);
+    a.cus = c;
     c.getAcc().deposit(100);
     c.getAcc().withdraw(960);
     c.getAcc().withdraw(2000);
@@ -72,15 +73,19 @@ class Account{
   //年利率
   private double annualInterestRate;
 
+  //顾客类
+  Customer cus;
+
   //无参数的构造方法
   public Account(){
   }
 
   //有参数的构造方法
-  public Account(String id, double balance, double annualInterestRate){
+  public Account(String id, double balance, double annualInterestRate, Customer cus){
     this.id = id;
     this.balance = balance;
     this.annualInterestRate = annualInterestRate;
+    this.cus = cus;
   }
 
   //setter and getter
@@ -105,14 +110,21 @@ class Account{
     return annualInterestRate;
   }
 
+  public void setCus(Customer cus){
+    this.cus = cus;
+  }
+  public Customer getCus(){
+    return cus;
+  }
+
   public void withdraw(int i){
     if(balance>=i){
       System.out.println("成功取出："+i);
       this.balance = balance - i;
     }else{
       System.out.println("余额不足，取钱失败");
+      System.out.println("Customer [" +this.cus.getName()+"] " + "has a account ：id is " +id+ " annualInterestRate is "+annualInterestRate+"%"+ " balance is "+balance);
       return;
-      //System.out.println("Customer [" +getCustomer().name()+"] " + "has a account ：id is " +id+ " annualInterestRate is "+annualInterestRate+"%"+ " balance is "+balance);
     }
   }
 
