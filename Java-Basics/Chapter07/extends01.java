@@ -15,7 +15,7 @@
   */
 
 
-public class extends01{
+public class Extends01{
   public static void main(String[] args){
     Account a = new Account();
     a.setActNo("11111");
