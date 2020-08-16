@@ -5,7 +5,10 @@
 //测试程序
 public class Super03{
   public static void main(String[] args){
-
+    CreditAccount c1 = new CreditAccount();
+    System.out.println(c1.getActNo()+","+c1.getBalance()+","+c1.getCredit());
+    CreditAccount c2 = new CreditAccount("12345678",2000000.0,98.9);
+    System.out.println(c2.getActNo()+","+c2.getBalance()+","+c2.getCredit());
   }
 }
 
